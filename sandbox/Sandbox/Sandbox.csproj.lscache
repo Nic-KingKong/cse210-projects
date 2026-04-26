@@ -9,7 +9,6 @@ version=1
 
 [project]
 language=C#
-primary
 lastDtbSucceeded
 
 [properties]
