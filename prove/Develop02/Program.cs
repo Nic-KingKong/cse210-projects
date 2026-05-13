@@ -7,5 +7,10 @@ class Program
         JournalEntry entry = new JournalEntry();
         entry.CreateJournalEntry();
         entry.Display();
+        Console.WriteLine(entry.CreateFileSystemString());
+
+        Journal journal = new Journal();
+        journal.AddEntry(entry);
+        journal.DisplayEntries();
     }
 }
