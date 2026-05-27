@@ -59,6 +59,7 @@ obj/Debug/net10.0/
  Develop03.AssemblyInfo.cs
  Develop03.GlobalUsings.g.cs
 Program.cs
+Word.cs
 
 [metadataReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.6/ref/net10.0/
