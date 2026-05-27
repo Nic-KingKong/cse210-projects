@@ -16,7 +16,21 @@ class Program
         journal.AddEntry(entry);
         journal.AddEntry(entry2);
 
-        
+
         journal.DisplayEntries();
+        int response = 0;
+        response = int.Parse(Console.ReadLine());
+
+        switch(response)
+        {
+            case 1:
+                JournalEntry newEntry = new JournalEntry();
+                newEntry.CreateJournalEntry();
+                journal.AddEntry(newEntry);
+                break;
+            case 2:
+                journal.DisplayEntries();
+                break;
+        }
     }
 }
