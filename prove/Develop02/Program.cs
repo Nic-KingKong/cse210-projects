@@ -6,8 +6,8 @@ class Program
     {
         JournalEntry entry = new JournalEntry();
         entry.CreateJournalEntry();
-       // entry.Display();
-       // Console.WriteLine(entry.CreateFileSystemString());
+        //entry.Display();
+        //Console.WriteLine(entry.CreateFileSystemString());
         JournalEntry entry2 = new JournalEntry();
         entry2.CreateJournalEntry();
 
