@@ -9,6 +9,6 @@ class Police : Person
 
     public string GetPoliceInfo()
     {
-        return $"weapons: {_weapons}, {GetPersonInfo()}";
+        return $"Weapons: {_weapons}, {GetPersonInfo()}";
     }
 }
