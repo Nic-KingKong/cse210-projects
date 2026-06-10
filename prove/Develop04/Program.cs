@@ -4,6 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop04 World!");
+        BaseActivity activity = new BaseActivity("Sample Activity", "This is a sample activity description.");
+        activity.DisplayStartMessage();
+        activity.RunCountDown("Breath in");
+        activity.RunCountDown("Breath out");
+        activity.DisplayEndMessage();
     }
 }
