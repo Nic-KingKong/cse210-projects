@@ -22,7 +22,7 @@ class Program
         // entry2.CreateJournalEntry();
 
 
-        // Journal journal = new Journal();
+         Journal journal = new Journal();
         // journal.AddEntry(entry);
         // journal.AddEntry(entry2);
 
@@ -45,6 +45,19 @@ class Program
                     break;
                 case 2:
                     journal.DisplayEntries();
+                    break;
+                case 3:
+                    Console.WriteLine("What is the filename of the journal you want to load? ");
+                    string loadFileName = Console.ReadLine();
+                    journal.ReadFromFile(loadFileName);
+                    break;
+                case 4:
+                    Console.WriteLine("What is the filename of the journal you want to save? ");
+                    string saveFileName = Console.ReadLine();
+                    journal.SaveToFile(saveFileName);
+                    break;  
+                default:
+                    Console.WriteLine("Please select a valid option.");
                     break;
             }
             menu.menuDisplay_6();
