@@ -1,4 +1,4 @@
-class Person
+abstract class Person
 {
     private string _firstName;
     private string _lastName;
@@ -10,17 +10,39 @@ class Person
     {
         _firstName = firstName;
         _lastName = lastName;
-        _age = age;
-        _weight = weight;
+        SetAge(age);
+        SetWeight(weight);
     }
 
-    public string GetPersonInfo()
+    public virtual string GetPersonInfo()
     {
         return $"Name: {_firstName} {_lastName}, age: {_age}, weight: {_weight}";
     }
 
-    public void ChangeWeight(int updatedWeight)
+    public void ChangeWeight(int weight)
     {
-        _weight += updatedWeight;
+        SetWeight(_weight + weight);
     }
+    
+    public void SetAge(int age)
+    {
+        _age = age;
+        if (_age < 0 || _age > 120)
+        {
+            _age = 0;
+            Console.WriteLine("Invalid age.");
+        }
+    }
+
+    public void SetWeight(int weight)
+    {
+        _weight = weight;
+        if (_weight < 0 || _weight > 1000)
+        {
+            _weight = 0;
+            Console.WriteLine("Invalid weight.");
+        }
+    }
+
+    public abstract double GetSalary();
 }
