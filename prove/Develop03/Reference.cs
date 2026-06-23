@@ -10,7 +10,7 @@ class Reference
 
     private int _endVerse;
 
-    public void ScriptureReference(string name, int chapter, int verse)
+    public Reference(string name, int chapter, int verse)
     {
         _bookName = name;
         _chapter = chapter;
@@ -18,7 +18,7 @@ class Reference
         _endVerse = verse;
     }
 
-    public void ScriptureReference(string name, int chapter, int startVerse, int endVerse)
+    public Reference(string name, int chapter, int startVerse, int endVerse)
     {
         _bookName = name;
         _chapter = chapter;
@@ -26,4 +26,15 @@ class Reference
         _endVerse = endVerse;
     }
 
+    public string GetReferenceString()
+    {
+        if (_startVerse == _endVerse)
+        {
+            return $"{_bookName} {_chapter}:{_startVerse}";
+        }
+        else
+        {
+            return $"{_bookName} {_chapter}:{_startVerse}-{_endVerse}";
+        }
+    }
 }
