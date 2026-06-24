@@ -4,6 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop05 World!");
+        BaseGoal goal = new BaseGoal();
+        goal.SetName();
+        goal.SetDescription();
+        goal.SetNumberOfPoints();
+        Console.WriteLine(goal.GetDisplayString());
+        goal.MarkComplete();
+        Console.WriteLine(goal.GetDisplayString());
     }
 }
