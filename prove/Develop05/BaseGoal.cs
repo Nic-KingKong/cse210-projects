@@ -1,4 +1,4 @@
-class BaseGoal
+abstract class BaseGoal
 {
      private string _name;
         private string _description;
@@ -15,17 +15,17 @@ class BaseGoal
         _goalType = "";
     }
 
-    public void SetName()
+    protected void SetName()
     {
         Console.Write("What is the name of your goal? ");
         _name = Console.ReadLine();
     }
-    public void SetDescription()
+    protected void SetDescription()
     {
         Console.Write($"What is the description for {_name} goal? ");
         _description = Console.ReadLine();
     }
-    public void SetNumberOfPoints()
+    protected void SetNumberOfPoints()
     {
         Console.Write($"How many points is the {_name} goal worth? ");
         _numberOfPoints = int.Parse(Console.ReadLine());
@@ -35,9 +35,11 @@ class BaseGoal
         string status = _status ? "[X]" : "[ ]";
         return $"{status} Goal: {_name}\nDescription: {_description}\nPoints: {_numberOfPoints}";
     }
-    public int MarkComplete()
+    protected int MarkComplete()
     {
         _status = true;
         return _numberOfPoints;
     }
+    public abstract void CreateGoal();
+    public abstract void RecordEvent();
 }
